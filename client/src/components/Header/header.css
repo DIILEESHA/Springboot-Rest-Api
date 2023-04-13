@@ -8,9 +8,10 @@
   flex: 1;
 }
 .header__middle {
-  flex: 3;
-  overflow: hidden;
+  height: 100vh;
+  overflow-y: scroll;
+  flex: 4;
 }
 .header__right {
-  flex:2;
+  flex: 2;
 }

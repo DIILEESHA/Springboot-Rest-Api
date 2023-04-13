@@ -1,6 +1,10 @@
 .status__bar__container {
   padding: 20px 30px;
   overflow-x: scroll;
+  position: sticky;
+  background-color: black;
+  top: 0;
+  z-index: 1;
 }
 .main__status {
   display: flex;

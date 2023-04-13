@@ -13,7 +13,6 @@ const Header = () => {
       <div className="header__middle">
         <Statusbar />
         <Post />
-        <Post />
       </div>
       <div className="header__right">3</div>
     </div>
