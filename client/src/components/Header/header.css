@@ -1,0 +1,16 @@
+.header__controller {
+  display: flex;
+  background-color: black;
+  color: #fff;
+  height: 100vh;
+}
+.header__left {
+  flex: 1;
+}
+.header__middle {
+  flex: 3;
+  overflow: hidden;
+}
+.header__right {
+  flex:2;
+}
