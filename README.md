@@ -12,7 +12,5 @@ Please go under edit and edit this file as needed for your project
 
 ### Member 4 - IT20641924 - Weerasinghe WGSM
 
-#### Brief Description of your Solution -
 
-Note - The student's github account should be given in brackets e.g. (asiriRepos), this ideally should be your student id
 

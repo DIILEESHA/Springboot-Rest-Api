@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  /* background-color: #ffffff; */
+  overflow: hidden;
 }
 ::-webkit-scrollbar {
   width: 1px;
