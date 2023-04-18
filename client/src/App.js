@@ -1,10 +1,19 @@
 import "./App.css";
-import Header from "./components/Header/Header";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Log from "./components/Login/Log";
+import Sign from "./components/Sign/Sign";
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/login" element={<Log />} />
+          <Route path="/signup" element={<Sign />} />
+          {/* <Route path="/" element={<Home />} /> */}
+
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

@@ -5,3 +5,8 @@
 ::-webkit-scrollbar {
   width: 1px;
 }
+
+Link,
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,104 @@
+.log__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: url("https://images.unsplash.com/photo-1535850452425-140ee4a8dbae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=812&q=80");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  opacity: 100%;
+  color: #fff;
+
+  position: absolute;
+}
+.log__card {
+  margin-bottom: 2px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  width: 30%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.log__title {
+  /* font-family: "poppins", sans-serif; */
+  border-bottom: 1px solid #ddd;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  font-family: "Fasthand", cursive;
+  text-align: center;
+  margin: 0px auto 10px auto;
+}
+.log__input {
+  outline: none;
+  /* width: 100%; */
+  width: -webkit-fill-available;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border: 1px solid #333;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 10px 4px;
+  margin: 5px auto;
+}
+.log__input::placeholder {
+  /* padding: 10px 5px; */
+  color: #fff;
+}
+.log__btn {
+  width: -webkit-fill-available;
+  background-color: teal;
+  border: 1px solid #333;
+  margin-top: 5px;
+  /* border: none; */
+  padding: 5px 4px;
+  font-family: "poppins", sans-serif;
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+}
+.log__btn:hover {
+  /* background-color: transparent; */
+}
+.log__span {
+  text-align: center;
+  font-family: "poppins", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1.1px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.log__social {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+  cursor: pointer;
+  margin: 0px auto 10px auto;
+  background-color: transparent;
+  /* border: 0.01px solid #332; */
+  /* padding: 5px; */
+  /* margin-bottom: 20px; */
+}
+.dfg {
+  color: #fff;
+  font-size: 20px;
+}
+.fb {
+  font-family: "poppins", sans-serif;
+  color: #fff;
+  font-weight: 300;
+  font-size: 15px;
+}
