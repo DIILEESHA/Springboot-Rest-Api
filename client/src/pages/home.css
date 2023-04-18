@@ -1,6 +1,5 @@
 .home__container {
   display: flex;
-  overflow: hidden;
   /* background-color: black; */
 }
 .home__left {
@@ -10,6 +9,8 @@
 .home__middle {
   background-color: #18181b;
   flex: 2.5;
+  height: 100vh;
+  /* overflow-y:scroll ; */
 }
 .home__right {
   background-color: #18181b;

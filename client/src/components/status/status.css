@@ -1,0 +1,31 @@
+.status__container {
+  color: #ddd;
+  padding: 20px;
+  display: flex;
+  width: 600px;
+  overflow-x: scroll;
+}
+.status__view {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+.fx {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.status__title {
+  font-family: "poppins", sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+}
+
+.img {
+  width: 60px;
+  border: 2px solid #ddd;
+  height: 60px;
+
+  border-radius: 50%;
+}

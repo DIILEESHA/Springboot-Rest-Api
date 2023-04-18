@@ -1,6 +1,8 @@
 import React from "react";
 import "./home.css";
 import Sidenav from "../components/sidenavbar/Sidenav";
+import Statusbar from "../components/status/Statusbar";
+import Post from "../components/Mainpost/Post";
 
 const Home = () => {
   return (
@@ -8,7 +10,10 @@ const Home = () => {
       <div className="home__left">
         <Sidenav />
       </div>
-      <div className="home__middle">2</div>
+      <div className="home__middle">
+        <Statusbar />
+        <Post />
+      </div>
       <div className="home__right">3</div>
     </div>
   );
