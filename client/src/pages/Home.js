@@ -13,6 +13,7 @@ const Home = () => {
       <div className="home__middle">
         <Statusbar />
         <Post />
+        <Post />
       </div>
       <div className="home__right">3</div>
     </div>

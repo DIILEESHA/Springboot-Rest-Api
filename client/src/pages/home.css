@@ -1,18 +1,24 @@
 .home__container {
   display: flex;
+  
   /* background-color: black; */
 }
 .home__left {
+  overflow: hidden;
+  height: 100vh;
   background-color: #18181b;
   flex: 1;
 }
 .home__middle {
   background-color: #18181b;
+  overflow: hidden;
   flex: 2.5;
   height: 100vh;
-  /* overflow-y:scroll ; */
+  overflow-y:scroll ;
 }
 .home__right {
+  overflow: hidden;
+
   background-color: #18181b;
   flex: 1.8;
 }
