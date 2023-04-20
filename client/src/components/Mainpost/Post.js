@@ -36,7 +36,13 @@ class Post extends Component {
               <h4 className="author__name">Jhon :</h4>
               <h4 className="author__name">Nice one </h4>
             </div>
-            
+            <div className="main__comment__box">
+              <input
+                type="text"
+                placeholder="Add a comment"
+                className="comment__box"
+              />
+            </div>
           </div>
         </div>
       </div>
