@@ -8,7 +8,7 @@
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   /* border-radius: 5px; */
-  margin: 0px 10px 20px 30px;
+  margin: 0px 10px 20px 20px;
   display: flex;
   flex-direction: column;
   /* align-items: center; */
@@ -42,4 +42,51 @@
   height: 70vh;
   padding: 5px auto;
   width: 100%;
+}
+.user__react__opt {
+  color: #ddd;
+  display: flex;
+  gap: 5px;
+  padding: 5px 5px 5px 4px;
+}
+.ico {
+  font-size: 20px;
+  cursor: pointer;
+}
+.like__count {
+  padding: 5px 4px;
+  color: #ddd;
+  font-family: "poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+}
+.comment__section {
+  color: #ddd;
+  font-family: "poppins", sans-serif;
+}
+.author__comment {
+  padding: 5px 4px;
+  display: flex;
+  align-items: center;
+}
+.author__name {
+  font-weight: 300;
+  font-size: 12px;
+}
+.main__comment__box {
+  /* padding: 5px auto; */
+  /* margin: 0; */
+}
+.comment__box {
+  width: -webkit-fill-available;
+  padding: 5px 0;
+  color: #ddd;
+  outline: none;
+  border: 1px solid #333;
+  background-color: #27272a;
+}
+.comment__box::placeholder {
+  color: #ddd;
+  padding: 0 3px;
+  font-size: 11px;
 }

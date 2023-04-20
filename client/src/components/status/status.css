@@ -2,10 +2,10 @@
   color: #ddd;
   /* margin: 20px 30px; */
 
-  padding: 20px 30px;
+  padding: 20px 15px;
   /* padding: 30px; */
   display: flex;
-  width: 650px;
+  /* width: 650px; */
   position: sticky;
   top: 0;
   background-color: #18181b;

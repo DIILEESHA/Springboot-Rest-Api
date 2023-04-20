@@ -31,47 +31,14 @@ const viewr = [
   {
     img: "https://images.pexels.com/photos/3760734/pexels-photo-3760734.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     author: "devon3",
-  },
-  {
-    img: "https://images.pexels.com/photos/7206190/pexels-photo-7206190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    author: "leang3",
-  },
-  {
+  }, {
+    img: "https://images.pexels.com/photos/3760734/pexels-photo-3760734.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    author: "devon3",
+  }, {
     img: "https://images.pexels.com/photos/3760734/pexels-photo-3760734.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     author: "devon3",
   },
-  {
-    img: "https://images.pexels.com/photos/7206190/pexels-photo-7206190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    author: "leang3",
-  },
-  {
-    img: "https://images.pexels.com/photos/7206190/pexels-photo-7206190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    author: "leang3",
-  },
-  {
-    img: "https://images.pexels.com/photos/7206190/pexels-photo-7206190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    author: "leang3",
-  },
-  {
-    img: "https://images.pexels.com/photos/7206190/pexels-photo-7206190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    author: "leang3",
-  },
-  {
-    img: "https://images.pexels.com/photos/7206190/pexels-photo-7206190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    author: "leang3",
-  }, {
-    img: "https://images.pexels.com/photos/7206190/pexels-photo-7206190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    author: "leang3",
-  }, {
-    img: "https://images.pexels.com/photos/7206190/pexels-photo-7206190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    author: "leang3",
-  }, {
-    img: "https://images.pexels.com/photos/7206190/pexels-photo-7206190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    author: "leang3",
-  }, {
-    img: "https://images.pexels.com/photos/7206190/pexels-photo-7206190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    author: "leang3",
-  },
+  
 ];
 
 export default viewr;

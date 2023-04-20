@@ -3,6 +3,7 @@ import "./home.css";
 import Sidenav from "../components/sidenavbar/Sidenav";
 import Statusbar from "../components/status/Statusbar";
 import Post from "../components/Mainpost/Post";
+import Suggestion from "../components/suggestions/Suggestion";
 
 const Home = () => {
   return (
@@ -15,7 +16,9 @@ const Home = () => {
         <Post />
         <Post />
       </div>
-      <div className="home__right">3</div>
+      <div className="home__right">
+        <Suggestion />
+      </div>
     </div>
   );
 };
