@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <AuthContextProvider>
         <BrowserRouter>
-          <Navbar />
+        {/* <Navbar/> */}
           <Routes>
             <Route path="/login" element={<Log />} />
             <Route path="/signup" element={<Sign />} />

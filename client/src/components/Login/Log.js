@@ -44,9 +44,9 @@ const Log = () => {
         <button className="log__btn">log in</button>
         <h3 className="log__span">OR</h3>
 
-        <GoogleButton onClick={handleGoogleSignIn} />
+        {/* <GoogleButton onClick={handleGoogleSignIn} /> */}
 
-        <div className="log__social">
+        <div onClick={handleGoogleSignIn} className="log__social">
           <AiFillFacebook className="dfg" />
           <h4 className="fb">Log in with Facebook</h4>
         </div>
