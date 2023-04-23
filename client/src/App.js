@@ -3,22 +3,32 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Log from "./components/Login/Log";
 import Sign from "./components/Sign/Sign";
 import Home from "./pages/Home";
-import { AuthContextProvider } from "./context/AuthContext";
+import { UserAuthContextProvider } from "./context/UserAuthContext";
 import Navbar from "./components/Navbar/Navbar";
+import Protect from "./components/protected/Protect";
 
 function App() {
   return (
     <div className="App">
-      <AuthContextProvider>
-        <BrowserRouter>
-        {/* <Navbar/> */}
+      <UserAuthContextProvider>
+        {/* <BrowserRouter> */}
+          {/* <Navbar/> */}
           <Routes>
-            <Route path="/login" element={<Log />} />
+            <Route path="/" element={<Log />} />
             <Route path="/signup" element={<Sign />} />
-            <Route path="/" element={<Home />} />
+            <Route
+              path="/home"
+              element={
+                <Protect>
+                  <Home />
+                </Protect>
+              }
+            />
+
+            {/* <Route path="/home" element={<Home />} /> */}
           </Routes>
-        </BrowserRouter>
-      </AuthContextProvider>
+        {/* </BrowserRouter> */}
+      </UserAuthContextProvider>
     </div>
   );
 }

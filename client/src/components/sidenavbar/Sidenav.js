@@ -5,17 +5,18 @@ import { AiFillHome } from "react-icons/ai";
 import { IoIosAddCircle } from "react-icons/io";
 import { BsFillSearchHeartFill } from "react-icons/bs";
 import { MdExplore } from "react-icons/md";
-import { Link } from "react-router-dom";
-import { UserAuth } from "../../context/AuthContext";
+import { Link, useNavigate } from "react-router-dom";
+import { useUserAuth } from "../../context/UserAuthContext";
 
 const Sidenav = () => {
-  const { user, logOut } = UserAuth();
-
-  const handleSignOut = async () => {
+  const { logOut, user } = useUserAuth();
+  const navigate = useNavigate();
+  const handleLogout = async () => {
     try {
       await logOut();
+      navigate("/");
     } catch (error) {
-      console.log(error);
+      console.log(error.message);
     }
   };
 
@@ -52,12 +53,9 @@ const Sidenav = () => {
             src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt=""
           />
-          {/* <h2 className="li__des">profile</h2> */}
-          {user?.displayName ? (
-            <button onClick={handleSignOut}>Logout</button>
-          ) : (
-            <Link to="/login">Log out</Link>
-          )}
+          <h2 className="li__des" onClick={handleLogout}>
+            Log out
+          </h2>
         </li>
       </ul>
     </div>

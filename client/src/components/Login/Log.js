@@ -1,29 +1,47 @@
-import React, { Component, useEffect } from "react";
+import React, { Component, useEffect, useState } from "react";
 import "./log.css";
-import { AiFillFacebook } from "react-icons/ai";
+import {
+  AiFillFacebook,
+  AiFillGoogleCircle,
+  AiFillGooglePlusCircle,
+} from "react-icons/ai";
 import { MdFastfood } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { GoogleButton } from "react-google-button";
-import { UserAuth } from "../../context/AuthContext";
+import { useUserAuth } from "../../context/UserAuthContext";
 import { useNavigate } from "react-router-dom";
+import Alert from "../alert/Alert";
 
 const Log = () => {
-  const { googleSignIn, user } = UserAuth();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const { logIn, googleSignIn } = useUserAuth();
   const navigate = useNavigate();
 
-  const handleGoogleSignIn = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
     try {
-      await googleSignIn();
-    } catch (error) {
-      console.log(error);
+      await logIn(email, password);
+      navigate("/home");
+    } catch (err) {
+      Alert("fail", "OOPS! Try again");
+
+      // setError(err.message);
     }
   };
 
-  useEffect(() => {
-    if (user != null) {
-      navigate("/");
+  const handleGoogleSignIn = async (e) => {
+    e.preventDefault();
+    try {
+      await googleSignIn();
+      navigate("/home");
+    } catch (error) {
+      // console.log(error.message);
+      Alert("fail", "OOPS! Try again");
     }
-  }, [user]);
+  };
   return (
     <div className="log__container">
       <div className="log__card">
@@ -31,24 +49,35 @@ const Log = () => {
           <MdFastfood />
           foodie cafe
         </h2>
-        <div className="log__crdentials">
-          <input
-            type="text"
-            className="log__input"
-            placeholder="Phone number,usrname or email"
-          />
-        </div>
-        <div className="log__crdentials">
-          <input type="text" className="log__input" placeholder="Password" />
-        </div>
-        <button className="log__btn">log in</button>
+        <form onSubmit={handleSubmit}>
+          <div className="log__crdentials">
+            <input
+              type="text"
+              value={email}
+              className="log__input"
+              placeholder="Phone number,usrname or email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div className="log__crdentials">
+            <input
+              type="text"
+              value={password}
+              className="log__input"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <button className="log__btn">log in</button>
+        </form>
         <h3 className="log__span">OR</h3>
-
-        {/* <GoogleButton onClick={handleGoogleSignIn} /> */}
+        <div className="op">
+          {/* <GoogleButton className='log__btn' onClick={handleGoogleSignIn} /> */}
+        </div>
 
         <div onClick={handleGoogleSignIn} className="log__social">
-          <AiFillFacebook className="dfg" />
-          <h4 className="fb">Log in with Facebook</h4>
+          <AiFillGooglePlusCircle className="dfg" />
+          <h4 className="fb">Login with Google</h4>
         </div>
       </div>
       <div className="log__card">
