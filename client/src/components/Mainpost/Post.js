@@ -4,9 +4,11 @@ import "./post.css";
 import { AiOutlineHeart, AiOutlineComment } from "react-icons/ai";
 import { CiShare1 } from "react-icons/ci";
 import { Link } from "react-router-dom";
-const Post = () => {
+import moment from "moment";
+import PostTime from "./PostTime";
+const Post = ({ props }) => {
   const [posts, setPosts] = useState();
-
+  const [createdAt, setCreatedAt] = useState("");
   useEffect(() => {
     // axios.get('http://localhost:8070/api/posts/posted')
     //   .then(response => setPosts(response.data))
@@ -20,7 +22,7 @@ const Post = () => {
   };
   return (
     <div className="post__container">
-      {posts?.map((post,id) => {
+      {posts?.map((post, id) => {
         return (
           <div key={id}>
             <div className="post__card">
@@ -31,7 +33,11 @@ const Post = () => {
                     alt=""
                     className="post__author__img"
                   />
-                  <h3 className="post__author">sirilj</h3>
+                  <h4 className="post__author">sirilj</h4>
+                  <PostTime timestamp={post.createdAt} />
+                  <p className="post-created-at">
+                    {/* {moment(post.createdAt).fromNow()} */}
+                  </p>
                 </div>
               </Link>
               {/* <h2>impressive</h2> */}

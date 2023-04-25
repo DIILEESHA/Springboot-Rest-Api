@@ -5,9 +5,10 @@ import Statusbar from "../components/status/Statusbar";
 import Post from "../components/Mainpost/Post";
 import Suggestion from "../components/suggestions/Suggestion";
 import Create from "../components/Create/Create";
+import Singlepost from "../components/SinglepostModal/Singlepost";
 
 const Home = () => {
-  const [openmodal,setOpenmodal] =useState(false)
+  const [openmodal, setOpenmodal] = useState(false);
   return (
     <div className="home__container">
       <div className="home__left">
@@ -16,6 +17,7 @@ const Home = () => {
       <div className="home__middle">
         <Statusbar />
         <Post />
+        {/* <Singlepost /> */}
         {/* <Create /> */}
       </div>
       <div className="home__right">
