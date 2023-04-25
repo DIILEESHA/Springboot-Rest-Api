@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import "./sidenav.css";
 import { MdFastfood } from "react-icons/md";
 import { AiFillHome } from "react-icons/ai";
@@ -7,8 +7,11 @@ import { BsFillSearchHeartFill } from "react-icons/bs";
 import { MdExplore } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 import { useUserAuth } from "../../context/UserAuthContext";
+import Create from "../Create/Create";
 
 const Sidenav = () => {
+  const [openmodal, setOpenmodal] = useState(false);
+
   const { logOut, user } = useUserAuth();
   const navigate = useNavigate();
   const handleLogout = async () => {
@@ -41,8 +44,11 @@ const Sidenav = () => {
         </li>
         <li className="sidenav__li">
           <IoIosAddCircle style={{ Color: "#fff" }} className="fgr" />
-          <h2 className="li__des">create</h2>
+          <h2 className="li__des" onClick={() => setOpenmodal(true)}>
+            create
+          </h2>
         </li>
+        {openmodal && <Create closer={setOpenmodal} />}
         <li className="sidenav__li">
           <MdExplore style={{ Color: "#fff" }} className="fgr" />
           <h2 className="li__des">explore</h2>
