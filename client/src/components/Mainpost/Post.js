@@ -3,6 +3,7 @@ import axios from "axios";
 import "./post.css";
 import { AiOutlineHeart, AiOutlineComment } from "react-icons/ai";
 import { CiShare1 } from "react-icons/ci";
+import { Link } from "react-router-dom";
 const Post = () => {
   const [posts, setPosts] = useState();
 
@@ -19,14 +20,20 @@ const Post = () => {
   };
   return (
     <div className="post__container">
-      {posts?.map((post) => {
+      {posts?.map((post,id) => {
         return (
-          <>
+          <div key={id}>
             <div className="post__card">
-              <div className="post__author__reg">
-                <img src={""} alt="" className="post__author__img" />
-                <h3 className="post__author">sirilj</h3>
-              </div>
+              <Link to="/profile">
+                <div className="post__author__reg">
+                  <img
+                    src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_960_720.jpg"
+                    alt=""
+                    className="post__author__img"
+                  />
+                  <h3 className="post__author">sirilj</h3>
+                </div>
+              </Link>
               {/* <h2>impressive</h2> */}
               <img src={post.imageUrl} alt="" className="post__img" />
               <div className="user__react__opt">
@@ -50,7 +57,7 @@ const Post = () => {
                 </div>
               </div>
             </div>
-          </>
+          </div>
         );
       })}
     </div>

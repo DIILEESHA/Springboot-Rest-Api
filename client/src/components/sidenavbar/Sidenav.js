@@ -35,7 +35,9 @@ const Sidenav = () => {
 
       <ul className="side__ul">
         <li className="sidenav__li">
+        <Link to ='/home'>
           <AiFillHome className="fgr" />
+        </Link>
           <h2 className="li__des">home</h2>
         </li>
         <li className="sidenav__li">

@@ -10,11 +10,13 @@ class Statusbar extends Component {
     return (
       <div className="status__container">
         <div className="status__view">
-          {viewr.map((view) => {
+          {viewr.map((view,id) => {
             return (
+              <div key={id}>
               <div className="fx">
                 <img src={view.img} alt="" className="img" />
                 <h3 className="status__title">{view.author}</h3>
+              </div>
               </div>
             );
           })}
