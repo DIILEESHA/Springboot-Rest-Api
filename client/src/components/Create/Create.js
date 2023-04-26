@@ -30,7 +30,7 @@ const Create = ({ closer }) => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:8070/api/posts/posted", user);
+    await axios.post("http://localhost:8070/post", user);
     navigate("/home");
     window.location.reload();
     // <Navigate to="/home" />;

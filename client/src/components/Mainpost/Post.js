@@ -6,9 +6,12 @@ import { CiShare1 } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import moment from "moment";
 import PostTime from "./PostTime";
+import { FaHeart } from "react-icons/fa";
 const Post = ({ props }) => {
   const [posts, setPosts] = useState();
   const [createdAt, setCreatedAt] = useState("");
+  const [count, setCount] = useState(0);
+  const [liked, setLiked] = useState(false);
   useEffect(() => {
     // axios.get('http://localhost:8070/api/posts/posted')
     //   .then(response => setPosts(response.data))
@@ -17,8 +20,18 @@ const Post = ({ props }) => {
   }, []);
 
   const loadData = async () => {
-    const resultData = await axios.get("http://localhost:8070/api/posts/");
+    const resultData = await axios.get("http://localhost:8070/posts");
     setPosts(resultData.data);
+  };
+
+  const handleClick = () => {
+    if (!liked) {
+      setCount(count + 1);
+      setLiked(true);
+    } else {
+      setCount(count - 1);
+      setLiked(false);
+    }
   };
   return (
     <div className="post__container">
@@ -43,11 +56,23 @@ const Post = ({ props }) => {
               {/* <h2>impressive</h2> */}
               <img src={post.imageUrl} alt="" className="post__img" />
               <div className="user__react__opt">
-                <AiOutlineHeart className="ico" />
+                <button
+                  style={{ background: "transparent", border: "none" }}
+                  onClick={handleClick}
+                >
+                  <AiOutlineHeart
+                    className="ico"
+                    color={liked ? "red" : "white"}
+                  />
+                </button>
+                {/* <AiOutlineHeart className="ico" /> */}
                 <AiOutlineComment className="ico" />
                 <CiShare1 className="ico" />
               </div>
-              <h4 className="like__count">7k likes</h4>
+              <h4 className="like__count">
+                {count} like
+                {/* 7k likes */}
+              </h4>
 
               <div className="comment__section">
                 <div className="author__comment">
