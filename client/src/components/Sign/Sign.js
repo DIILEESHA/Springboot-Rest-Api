@@ -56,12 +56,12 @@ const Sign = () => {
             Sign up
           </button>
         </form>
-        <h3 className="log__span">OR</h3>
+        {/* <h3 className="log__span">OR</h3> */}
 
-        <div className="log__social">
+        {/* <div className="log__social"> */}
           {/* <AiFillFacebook className="dfg" /> */}
           {/* <h4 className="fb">Log in with Facebook</h4> */}
-        </div>
+        {/* </div> */}
       </div>
       <div className="log__card">
         <h3 className="log__span">

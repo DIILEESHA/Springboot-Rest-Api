@@ -48,6 +48,9 @@
   gap: 10px;
   /* flex-wrap: wrap; */
 }
+.profile__post__card:hover {
+  background-color: rgba(0, 0, 0, 0.24);
+}
 .profile__post__card {
   /* border: 1px solid #ddd; */
   /* width: 33.3%; */
