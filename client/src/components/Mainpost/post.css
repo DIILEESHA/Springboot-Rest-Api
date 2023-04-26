@@ -14,12 +14,13 @@
   /* align-items: center; */
   /* justify-content: center; */
 }
-.dml{
-  font-family: 'poppins',sans-serif;
+.dml {
+  font-family: "poppins", sans-serif;
   font-size: 13px;
   text-transform: capitalize;
   font-weight: 300;
-  display: flex;align-items: center;
+  display: flex;
+  align-items: center;
 }
 .post__author__reg {
   align-items: center;
@@ -31,10 +32,10 @@
   margin-bottom: 5px;
 }
 .post__author__img {
-  width: 40px;
+  width: 30px;
   padding: 3px;
   /* background-color: teal; */
-  height: 40px;
+  height: 30px;
   border: 2px solid #ddd;
   border-radius: 50%;
 }
@@ -44,6 +45,18 @@
   font-size: 14px;
   text-transform: capitalize;
   font-weight: 300;
+}
+.gvcx {
+  border-radius: 50%;
+  background-color: #27272a;
+  width: 20px;
+  height: 20px;
+}
+.bck{
+  background-color:#27272a; /* Set your desired background color */
+  display: inline-block;
+  /* padding: 10px; */
+  border-radius: 50%;
 }
 .post__img {
   object-fit: cover;

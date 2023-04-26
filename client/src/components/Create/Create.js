@@ -10,6 +10,8 @@ import { RiCloseCircleFill } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
 import { useNavigate, Navigate, Link } from "react-router-dom";
 import axios from "axios";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 
 const Create = ({ closer }) => {
   let navigate = useNavigate();
@@ -59,45 +61,40 @@ const Create = ({ closer }) => {
           <h2 className="card__title">create new post</h2>
           <div className="fty">
             <MdAddAPhoto className="gh" />
-            <h2 className="frt">Drag photos and videos here</h2>
+            <h2 className="frt">Drag image & description here</h2>
 
             <input
               type={"text"}
-              // className="form-control"
-              placeholder="Enter your name"
-              name="description"
-              value={description}
-              onChange={(e) => onInputChange(e)}
-            />
-            <input
-              type={"text"}
-              // className="form-control"
+              className="form-control"
               placeholder="Enter your image"
               name="imageUrl"
               value={imageUrl}
+              required
               onChange={(e) => onInputChange(e)}
             />
+
+            <textarea
+              id=""
+              cols="10"
+              rows="4"
+              className="form-control"
+              placeholder="Enter your description"
+              name="description"
+              value={description}
+              required
+              onChange={(e) => onInputChange(e)}
+            />
+
             {/* <Link to="/home"> */}
             <button
               type="submit"
+              className="filer"
               // onClick={() => closer(false)}
               onSubmit={onsubmit}
             >
-              send
+              upload post
             </button>
             {/* </Link> */}
-            <div className="filer">
-              <label className="fgmk" for="file-upload">
-                select from computer
-              </label>
-              <input
-                id="file-upload"
-                accept="image/*"
-                className="filers"
-                type="file"
-                onChange={imageChange}
-              />
-            </div>
           </div>
           <div className="jh">
             {selectedImage && (

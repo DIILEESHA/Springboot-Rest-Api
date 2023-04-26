@@ -30,4 +30,112 @@
 }
 .right__side__singlepost {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.user__ctrl {
+  height: 10%;
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0px 0px; */
+  padding: 5px 10px;
+
+  border-bottom: 1px solid #cecaca;
+}
+.user__controller {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.user__controller img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+.username {
+  font-family: "poppins", sans-serif;
+  opacity: 100%;
+
+  font-weight: 500;
+  font-size: 15px;
+}
+.post__description__area {
+  padding: 5px 10px;
+  overflow-y: scroll;
+  height: 80%;
+  /* border: 1px solid #000; */
+}
+.descriptions {
+  font-family: "poppins", sans-serif;
+  font-size: 15px;
+  nav-down: 500;
+  opacity: 70%;
+  /* color: #333; */
+}
+.comment__area {
+  /* padding: 5px 10px; */
+
+  height: 5%;
+  /* border: 1px solid #000; */
+}
+.com__input {
+  width: -webkit-fill-available;
+  padding: 1px 3px;
+  border: none;
+  border-top: 1px solid #aca9a9;
+  outline: none;
+}
+.dfmk {
+  position: relative;
+}
+.post__popup__settings {
+  /* border: 1px solid #dfd9d9; */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 50vw; */
+  /* height: 50%; */
+  /* margin: 0 auto; */
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+}
+.h {
+  position: relative;
+  width: 30%;
+  /* height: 40vh; */
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 10px;
+  /* border: 1px solid #fff; */
+  position: relative;
+}
+.h__ul {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.h__li {
+  padding: 14px;
+  list-style: none;
+  border-bottom: 1px solid #c2bebe;
+  font-family: "poppins", sans-serif;
+  /* text-transform: capitalize; */
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.h__li:last-child{
+  border-bottom: 1px solid transparent;
 }

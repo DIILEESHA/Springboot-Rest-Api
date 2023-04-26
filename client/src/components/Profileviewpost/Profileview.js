@@ -5,7 +5,7 @@ import Post from "../Mainpost/Post";
 import Sidenav from "../sidenavbar/Sidenav";
 import { IoIosSettings } from "react-icons/io";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Singlepost from "../SinglepostModal/Singlepost";
 
 const Profileview = () => {
@@ -44,7 +44,7 @@ const Profileview = () => {
         <Sidenav />
       </div>
       <div className="home__middle n2">
-        <Singlepost />
+        {/* <Singlepost /> */}
         <div className="profiler">
           <div className="profile__img__set">
             <div className="bns">
@@ -52,7 +52,7 @@ const Profileview = () => {
                 src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt=""
               />
-              <h3 className="usernamef">dianaj</h3>
+              <h3 className="usernamef">anna</h3>
             </div>
             <div>
               <IoIosSettings className="lp" />
@@ -61,17 +61,13 @@ const Profileview = () => {
           <div className="profile__post">
             {posts?.map((post, index) => {
               return (
-                <div key={index}>
-                  <div className="profile__post__card">
-                    <img src={post.imageUrl} alt="" />
-                    <button
-                      style={{ marginBottom: "30px" }}
-                      onClick={() => deleteUser(post.id)}
-                    >
-                      delete
-                    </button>
+                <Link to={`/single/${post.id}`}>
+                  <div key={index}>
+                    <div className="profile__post__card">
+                      <img src={post.imageUrl} alt="" />
+                    </div>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>

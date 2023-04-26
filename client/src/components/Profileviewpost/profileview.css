@@ -29,10 +29,11 @@
   align-items: center;
 }
 .profile__img__set img {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
+  padding: 4px;
   border-radius: 50%;
-  border: 3px solid #ddd;
+  border: 2px solid #ddd;
 }
 .usernamef {
   font-family: "poppins", sans-serif;
