@@ -52,13 +52,15 @@
 }
 .user__controller img {
   width: 40px;
+  padding: 3px;
   height: 40px;
   border-radius: 50%;
-  border: 2px solid #333;
+  border: 2px solid #8b8888;
 }
 .username {
   font-family: "poppins", sans-serif;
   opacity: 100%;
+  text-transform: capitalize;
 
   font-weight: 500;
   font-size: 15px;
@@ -136,6 +138,6 @@
   cursor: pointer;
 }
 
-.h__li:last-child{
+.h__li:last-child {
   border-bottom: 1px solid transparent;
 }

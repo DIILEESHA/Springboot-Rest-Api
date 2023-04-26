@@ -75,11 +75,11 @@ const Singlepost = () => {
                 <div className="user__ctrl">
                   <div className="user__controller">
                     <img
-                      src="https://images.pexels.com/photos/16230774/pexels-photo-16230774.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                       alt=""
                     />
 
-                    <h3 className="username">saman</h3>
+                    <h3 className="username">anna</h3>
                   </div>
                   <div className="dfmk">
                     <BiDotsHorizontalRounded
