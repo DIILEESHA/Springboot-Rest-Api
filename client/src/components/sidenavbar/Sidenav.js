@@ -25,7 +25,7 @@ const Sidenav = () => {
 
   return (
     <div className="sidenav__container">
-      <Link to="/">
+      <Link to="/home">
         <h2 className="fg">
           <MdFastfood />f<span style={{ color: "teal" }}>oo</span>
           die c
